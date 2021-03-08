@@ -1,0 +1,112 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+	font-family: $font-primary;
+	line-height: 1.3;
+	background-color: $bg-color;
+	color: $text-color;	
+}
+
+h1,h2,h3,h4 {
+	font-family: $font-secondary;
+	line-height: 1;
+	margin-bottom: 2rem;
+}
+
+p {
+	font-size: 1.6rem;
+	margin-bottom: 1rem;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 2rem;
+	overflow: hidden;
+}
+
+.flex {
+	@include flex(center, flex-start);
+	flex-direction: column;
+}
+
+
+.list {
+
+	@include flex(flex-start, flex-start);
+
+	li{
+		margin: .5rem;
+
+		font-size: 1.2rem;
+	}
+
+	.icon {
+		margin-right: 0.5rem;
+	}
+
+	i {
+		font-size: 1em;
+	}
+}
+
+
+.logo {
+	display: inline-block;
+	width: 17rem;
+}
+
+.icon {
+	display: inline-block;
+	width: 2.5rem;
+	height: 2.5rem;
+	// @include flex;
+	text-align: center;
+	line-height: 2.5rem;
+	border: 1px solid rgba(black, 0.1);
+	background-color: rgba(black, 0.15);
+}
+
+
+// Visibility
+.hidden {
+	visibility: hidden;
+	opacity: 0;
+}
+
+
+// Bg
+
+
+// Text
+.capitalize {
+	text-transform: capitalize;
+}
+
+
+
