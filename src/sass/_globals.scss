@@ -87,6 +87,11 @@ svg {
 			width: 50%;
 		}
 
+		@media screen and (max-width: 375px) and (min-height: 812px) {
+			padding-bottom: 10vh;
+			padding-top: 5rem;
+		}
+
 		img {
 			position: absolute;
 			// top: 30%;
@@ -178,7 +183,7 @@ svg {
 
 .hide-mobile {
 	@include mq-max(899px) {
-		display: none;
+		display: none !important;
 	}
 }
 
