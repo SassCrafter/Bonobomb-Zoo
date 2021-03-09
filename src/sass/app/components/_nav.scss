@@ -4,11 +4,35 @@
 	left: 0;
 	width: 100%;
 	padding: 1.5rem 0;
-	background: #111;
 	z-index: 1000;
 
 	&__container {
 		@include flex(center, space-between);
+	}
+
+	&__list {
+		width: 50%;
+
+		a {
+			display: inline-block;
+			color: $text-color-white;
+			font-size: 1.4rem;
+			text-transform: capitalize;
+
+			&.active {
+				position: relative;
+
+				&::before {
+					content: '';
+					width: 2rem;
+					height: 2px;
+					background-color: $primary-color;
+					position: absolute;
+					bottom: -5px;
+					left: 0;
+				}
+			}
+		}
 	}
 }
 
@@ -29,10 +53,6 @@
 
 	&:hover {
 		color: $primary-color;
-	}
-
-	&.open {
-		
 	}
 
 	i {

@@ -9,7 +9,7 @@
 	text-align: center;
 	z-index: 999;
 	transform: translateY(-100%);
-	transition: transform $t-time cubic-bezier(.22,.67,.5,.97);
+	transition: transform .5s cubic-bezier(0.41, 0.38, 0.59, 1.04);
 
 	.container {
 		@include flex;

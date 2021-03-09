@@ -1,10 +1,15 @@
-@mixin bg-color($color) {
-	background-color: $color;
-	@if lightness($color) > 60 {
+@mixin color($bg-color) {
+	@if lightness($bg-color) > 60 {
 		color: $text-color;
 	} @else {
 		color: $text-color-white;
-	} 
+	}
+}
+
+
+@mixin bg-color($color) {
+	background-color: $color;
+	@include color($color);
 }
 
 
@@ -20,6 +25,12 @@
 	}
 }
 
+@mixin mq-max($size) {
+	@media screen and (max-width: $size) {
+		@content;
+	}
+}
+
 @mixin bg-image($url) {
 	background-image: url($url);
 	background-repeat: no-repeat;
@@ -27,24 +38,50 @@
 	background-position: center;
 }
 
-@mixin hover($color: $primary-color) {
+@mixin btn-hover($color: $primary-color) {
 	position: relative;
+	overflow: hidden;
+
+	&::before,
+	&::after {
+		content: '';
+	    position: absolute;
+	    top: 50%;
+	    // z-index: -1;
+	    padding: 10px;
+	    border-radius: 50%;
+	    opacity: 1;
+	    transition: 0s;
+	    will-change: transform;
+	}
 
 	&::before {
-		content: '';
-		width: 100%;
-		height: 3px;
-		background-color: $color;
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		transform: translateY(1rem);
-		opacity: 0;
-		transition: opacity $t-time linear, transform $t-time $t-ease;
+		left: -30%;
+    	transform: translate(-50%, -50%);
+	}
+
+	&::after {
+		right: -30%;
+    	transform: translate(50%, -50%);
+	}
+
+	&:hover {
+		@include color($color);
+		transition: color .3s .5s;
+	}
+
+	&:hover::before,
+	&:hover::after {
+		padding: 50%;
+    	transition: left .4s, right .4s, padding .3s .5s, opacity .05s .75s;
 	}
 
 	&:hover::before {
-		opacity: 1;
-		transform: translateY(0);
+		left: 50%;
+		background-color: $color;
+	}
+	&:hover::after {
+		right: 50%;
+		background-color: $color;
 	}
 }

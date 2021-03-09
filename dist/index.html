@@ -10,7 +10,7 @@
 
 	<!-- Fonts -->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@500;700&family=Lilita+One&display=swap" rel="stylesheet">
 
 	<link rel="stylesheet" href="./main.css">
 	<script src="./main.js" defer></script>
@@ -18,17 +18,48 @@
 <body>
 	<nav class="nav">
 		<div class="container nav__container">
-			<button class="navigation-toggler">
+			<button class="navigation-toggler hide-desktop">
 				<i class="fas fa-bars open"></i>
 				<i class="fas fa-times close hidden"></i>
 			</button>
 			<a href="#" class="logo">
 				<img src="./images/logo.svg" alt="Bonobomb">
 			</a>
-			<button class="info-button">
+			<button class="info-button hide-desktop">
 				<i class="fas fa-ellipsis-v"></i>
 				<i class="fas fa-times close hidden"></i>
 			</button>
+			<ul class="nav__list list hide-mobile">
+				<li >
+					<a href="#" class="active">Home</a>
+				</li>
+				<li >
+					<a href="#" >About</a>
+				</li>
+				<li >
+					<a href="#" >Plan your visit</a>
+				</li>
+				<li >
+					<a href="#" >Our Animals</a>
+				</li>
+				<li >
+					<a href="#" >Ticket prices</a>
+				</li>
+				<li >
+					<a href="#" >Contacts</a>
+				</li>
+			</ul>
+			<div class="cta">
+				<a href="#" class="btn btn--round btn--white btn--info">
+					<i class="fas fa-phone"></i>
+				</a>
+				<a href="#" class="btn btn--round btn--white btn--info">
+					<i class="fas fa-envelope"></i>
+				</a>
+				<a href="#" class="btn btn-primary btn--anis">
+					<span>Donate</span>
+				</a>
+			</div>
 		</div>
 	</nav>
 
@@ -56,5 +87,30 @@
 			</ul>
 		</div>
 	</div>
+
+
+	<main id="fullpage">
+		<section class="section iguana bg-first">
+
+			<div class="container">
+				<div class="section__wrapper">
+					<div class="left">
+						<div class="text">
+							<h1 class="xlarge">Discover The Beautiful World of Wild Nature</h1>
+							<p class="lead">Welcome to Bonobomb Zoo, home to a wide range of exotic animals, insects, birds, and a lot of other animal groups. Buy a ticket to our zoo and discover the variety of nature today!</p>
+							<div class="cta cta--start">
+								<a href="#" class="btn btn--anis"><span>Buy Ticket</span></a>
+								<a href="#" class="btn btn--outline btn--anis"><span>Learn More</span></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="right section__image">
+						<img src="./images/sections/lizard.png" alt="Iguana">
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
 </body>
 </html>
