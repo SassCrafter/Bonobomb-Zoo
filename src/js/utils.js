@@ -28,12 +28,16 @@ export function scaleValue(value, from, to) {
 export function setSectionElsTranslate(parent = document){
 	const jsSlideLeftEls = parent.querySelectorAll('.js-slide-left');
 	const jsSlideRightEls = parent.querySelectorAll('.js-slide-right');
+	const jsSlideBot = parent.querySelectorAll('.js-slide-bot');
 	const layers = parent.querySelectorAll('.layer-item');
 	jsSlideLeftEls.forEach(el => {
 		el.style.transform = 'translateX(-150%)';
 	});
 	jsSlideRightEls.forEach(el => {
-		el.querySelector('img').style.transform = 'translateX(150%)';
+		el.style.transform = 'translateX(150%)';
+	});
+	jsSlideBot.forEach(el => {
+		el.style.transform = 'translateY(150%)';
 	});
 	layers.forEach((el, idx) => {
 		if (idx % 2 === 0) el.style.transform = 'translateX(150%) translateY(-150%)';

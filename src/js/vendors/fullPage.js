@@ -1,9 +1,14 @@
 import fullpage from 'fullpage.js';
-import { sectionAnimation } from '../animations';
+import { sectionAnimation, sectionLeaveAnimation } from '../animations';
 import { setSectionElsTranslate } from '../utils';
 
 
+let timeLine;
+let currentSection;
+
 const fullpageInstance = new fullpage('#fullpage', {
+    anchors: ['home', 'home', 'home'],
+    menu: '.fullpage-menu',
     recordHistory: false,
     scrollingSpeed: 1000,
     easingcss3: 'cubic-bezier(.56,.4,.19,.84)',
@@ -15,15 +20,20 @@ const fullpageInstance = new fullpage('#fullpage', {
     },
 
     afterLoad: function(origin, destination, direction) {
-        const section = destination.item;
+        currentSection = destination.item;
         // console.log(section.querySelector('.js-slide-left'));
-        sectionAnimation(section);
+        timeLine = sectionAnimation(currentSection);
     },
 
     onLeave: function(origin, destination, direction) {
         const leaveSection = origin.item;
-        setTimeout(() => {
-            setSectionElsTranslate(leaveSection);
-        }, 1000)
+        // setTimeout(() => {
+        //     setSectionElsTranslate(leaveSection);
+        // }, 1000)
+        sectionLeaveAnimation(leaveSection);
+    },
+
+    afterResponsive: function() {
+        sectionAnimation(currentSection);
     }
 });

@@ -18,6 +18,12 @@
 			// width: 40%;
 		}
 
+		li.active {
+			a::before {
+				width: 2rem;
+			}
+		}
+
 		a {
 			display: inline-block;
 			color: $text-color-white;
@@ -47,9 +53,7 @@
 
 			&.active {
 
-				&::before {
-					width: 2rem;
-				}
+				
 			}
 		}
 	}

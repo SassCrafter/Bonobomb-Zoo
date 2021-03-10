@@ -1,4 +1,4 @@
-import { toggleClasses } from './utils';
+import { toggleClasses, removeClasses } from './utils';
 
 export default class {
 	constructor() {
@@ -14,10 +14,17 @@ export default class {
 		toggleClasses([openIcon, closeIcon], 'hidden');
 	}
 
+	goToSection(e) {
+		if (e.target.tagName === 'A') {
+			this.clickHandler();
+		}
+	}
+
 
 	init() {
 		this.navigation = document.querySelector('.navigation');
 		this.toggler = document.querySelector('.navigation-toggler');
 		this.toggler.addEventListener('click', this.clickHandler.bind(this));
+		this.navigation.addEventListener('click', this.goToSection.bind(this));
 	}
 }

@@ -177,6 +177,7 @@ svg {
 
 .giraffe {
 	.section__image img {
+		width: 60%;
 		// @include mq(768px) {
 		// 	width: 60% !important;
 		// 	left: -5% !important;
@@ -193,6 +194,13 @@ svg {
 			left: 5%;
 			width: 35%;
 		}
+	}
+}
+
+.rhino .section__image img {
+	@include mq-max(767px) {
+		left: 5%;
+		bottom: 0;
 	}
 }
 
@@ -269,6 +277,9 @@ svg {
 }
 .bg-second {
 	@include bg-color($second-color);
+}
+.bg-third {
+	@include bg-color($third-color);
 }
 
 // Text
