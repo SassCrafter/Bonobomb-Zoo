@@ -23,3 +23,23 @@ export function scaleValue(value, from, to) {
 	const capped = Math.min(from[1], Math.max(from[0], value)) - from[0];
 	return (capped * scale + to[0]);
 }
+
+
+export function setSectionElsTranslate(parent = document){
+	const jsSlideLeftEls = parent.querySelectorAll('.js-slide-left');
+	const jsSlideRightEls = parent.querySelectorAll('.js-slide-right');
+	const layers = parent.querySelectorAll('.layer-item');
+	jsSlideLeftEls.forEach(el => {
+		el.style.transform = 'translateX(-150%)';
+	});
+	jsSlideRightEls.forEach(el => {
+		el.querySelector('img').style.transform = 'translateX(150%)';
+	});
+	layers.forEach((el, idx) => {
+		if (idx % 2 === 0) el.style.transform = 'translateX(150%) translateY(-150%)';
+		else {
+			el.style.transform = 'translateX(-150%) translateY(150%)';
+		}
+		// el.style.opacity = 0;
+	});
+}
