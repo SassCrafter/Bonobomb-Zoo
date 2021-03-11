@@ -10,8 +10,3 @@ import './vendors/fullPage.js';
 
 const menu = new NavMenu();
 
-// videojs(document.querySelector('.video-js'), {
-//     constrols: true,
-//     autoplay: false,
-//     preload: auto,
-// })

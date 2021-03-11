@@ -47,177 +47,7 @@ svg {
     vertical-align: middle;
 }
 
-.section {
-	width: 100%;
-	height: 100vh;
-	position: relative;
-	overflow: hidden;
 
-	.container {
-		height: 100%;
-		
-	}
-
-	&__wrapper {
-		height: 100%;
-		@include flex;
-		flex-direction: column;
-		// padding-top: 10vh;
-
-
-		@include mq(768px) {
-			padding-top: 0;
-			padding-left: 5rem;
-			align-items: flex-start;
-		}
-		@include mq(900px) {
-			padding-top: 0;
-			flex-direction: row;
-			align-items: center;
-
-			&.img-left {
-				flex-direction: row-reverse;
-
-				// .section__image img {
-				// 	top: 0;
-				// 	right: auto;
-				// 	left: 0;
-				// 	bottom: 0;
-				// }
-			}
-		}
-		@include mq(1200px) {
-			padding-left: 0;
-		}
-
-
-		.left,
-		.right {
-			width: 100%;
-			@include mq(900px) {
-				width: 50%;	
-			}
-		}
-
-		.right.video {
-			@include flex(flex-start);
-
-			@include mq-max(900px) {
-				margin-top: 5rem;
-			}
-
-			// @include mq(900px) {
-			// 	margin-top: 0;
-			// 	margin-left: 10rem;
-			// }
-		}
-	}
-
-	&__image {
-		width: 100%;
-		// width: 100%;
-		// height: 30vh;
-		padding-bottom: 20vh;
-
-		@include mq(900px) {
-			width: 50%;
-		}
-
-		@media screen and (max-width: 375px) and (min-height: 812px) {
-			padding-bottom: 10vh;
-			padding-top: 5rem;
-		}
-
-		img {
-			position: absolute;
-			left: 50%;
-			transform: translateX(-50%);
-			width: 80%;
-			z-index: 2;
-
-			@include mq(768px) {
-				width: 60%;
-				left: auto;
-				right: 0;
-				bottom: 0;
-				transform: translateX(0);
-			}
-
-			@include mq(900px) {
-				width: 50%;
-				
-			}
-
-			@include mq(1200px) {
-				width: 50%;
-			}
-		}
-	}
-
-	&__layer {
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		pointer-events: none;
-		@include flex;
-		z-index: 1;
-
-		@include mq(900px) {
-			left: 10%;
-		}
-
-
-		.layer {
-			position: absolute;
-			width: auto;
-			height: 90%;
-			flex: 0 0 auto;
-		}
-
-		
-	}
-}
-
-
-.iguana  {
-	.section__image {
-		img {
-			left: auto;
-			right: 0;
-			transform: translate(0);
-		}
-	}
-}
-
-.giraffe {
-	.section__image img {
-		width: 60%;
-		bottom: 0;
-		// @include mq(768px) {
-		// 	width: 60% !important;
-		// 	left: -5% !important;
-		// }
-		@include mq(900px) {
-			top: auto;
-			bottom: 0;
-			right: auto;
-			left: -5%;
-			width: 55%;
-		}
-
-		@include mq(1200px) {
-			left: 5%;
-			width: 35%;
-		}
-	}
-}
-
-.rhino .section__image img {
-	@include mq-max(767px) {
-		left: 5%;
-		bottom: 0;
-	}
-}
 
 
 .relative {
@@ -239,6 +69,11 @@ svg {
 	flex-direction: column;
 }
 
+.jc-end {
+	justify-content: flex-end !important;
+	padding-bottom: 2rem;
+}
+
 
 .list {
 	@include flex(center, space-between);
@@ -250,16 +85,7 @@ svg {
 	width: 17rem;
 }
 
-.icon {
-	display: inline-block;
-	width: 2.5rem;
-	height: 2.5rem;
-	// @include flex;
-	text-align: center;
-	line-height: 2.5rem;
-	border: 1px solid rgba(black, 0.1);
-	background-color: rgba(black, 0.15);
-}
+
 
 
 // Visibility
@@ -293,14 +119,13 @@ svg {
 	margin-bottom: 2rem;
 
 	&__item {
-		flex: 1 1 15rem;
+		flex: 1 1 10rem;
 		margin: 1rem 0;
 		@include flex(center, flex-start);
 
 		img {
 			display: inline-block;
-			width: 50%;
-			max-width: 5rem;
+			width: 3rem;
 			margin-right: 1rem;
 			@include mq(768px) {
 				max-width: 6.5rem;
@@ -310,16 +135,73 @@ svg {
 		span {
 			text-transform: capitalize;
 			font-weight: 600;
+			font-size: 1.2rem;
 			@include mq(768px) {
-				font-size: 1.8rem;
+				font-size: 1.4rem;
+			}
+		}
+	}
+
+	&--column {
+		justify-content: space-between;
+		.icons__item {
+			flex: 1 1 15rem;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+			text-align: center;
+
+			@include mq(900px) {
+				flex: 0 1 45%;
+			}
+
+			.icon-bg {
+				margin-bottom: 1rem;
+			}
+			
+
+			h5 {
+				font-size: 1.4rem;
+				text-transform: capitalize;
+			}
+
+			p {
+				font-size: 1.2rem;
 			}
 		}
 	}
 }
 
+.icon {
+	display: inline-block;
+	width: 2.5rem;
+	height: 2.5rem;
+	// @include flex;
+	text-align: center;
+	line-height: 2.5rem;
+	border: 1px solid rgba(black, 0.1);
+	background-color: rgba(black, 0.15);
+
+	&-bg {
+		width: 5rem;
+		height: 5rem;
+		border-radius: 50%;
+		background-color: $second-color;
+		@include flex;
+
+		img {
+			margin: 0 !important;
+		}
+	}
+}
+
+.no-grow {
+	// flex-grow: 0 !important;
+}
+
 .video-js {
 	width: 60rem;
-	max-width: 100%;
+	max-width: 95%;
 	height: 20rem;
 
 	@include mq(768px) {
@@ -347,9 +229,14 @@ svg {
 .bg-third {
 	@include bg-color($third-color);
 }
-
 .bg-fourth {
 	@include bg-color($fourth-color);
+}
+.bg-fifth {
+	@include bg-color($fifth-color);
+}
+.bg-sixth {
+	@include bg-color($sixth-color);
 }
 
 // Text
