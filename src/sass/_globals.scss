@@ -91,11 +91,25 @@ svg {
 		}
 
 
-		.left {
+		.left,
+		.right {
 			width: 100%;
 			@include mq(900px) {
 				width: 50%;	
 			}
+		}
+
+		.right.video {
+			@include flex(flex-start);
+
+			@include mq-max(900px) {
+				margin-top: 5rem;
+			}
+
+			// @include mq(900px) {
+			// 	margin-top: 0;
+			// 	margin-left: 10rem;
+			// }
 		}
 	}
 
@@ -272,6 +286,57 @@ svg {
 // 	}
 // }
 
+
+.icons {
+	@include flex(center, space-between);
+	flex-wrap: wrap;
+	margin-bottom: 2rem;
+
+	&__item {
+		flex: 1 1 15rem;
+		margin: 1rem 0;
+		@include flex(center, flex-start);
+
+		img {
+			display: inline-block;
+			width: 50%;
+			max-width: 5rem;
+			margin-right: 1rem;
+			@include mq(768px) {
+				max-width: 6.5rem;
+			}
+		}
+
+		span {
+			text-transform: capitalize;
+			font-weight: 600;
+			@include mq(768px) {
+				font-size: 1.8rem;
+			}
+		}
+	}
+}
+
+.video-js {
+	width: 60rem;
+	max-width: 100%;
+	height: 20rem;
+
+	@include mq(768px) {
+		height: 35rem;
+	}
+	video {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+.vjs-big-play-button {
+	top: 50% !important;
+	left: 50% !important;
+	transform: translate(-50%, -50%);
+}
+
 // Bg
 .bg-first {
 	@include bg-color($first-color);
@@ -281,6 +346,10 @@ svg {
 }
 .bg-third {
 	@include bg-color($third-color);
+}
+
+.bg-fourth {
+	@include bg-color($fourth-color);
 }
 
 // Text
