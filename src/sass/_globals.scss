@@ -163,10 +163,17 @@ svg {
 			h5 {
 				font-size: 1.4rem;
 				text-transform: capitalize;
+				@include mq(1200px) {
+					font-size: 1.6rem;
+					margin-bottom: 0.75rem;
+				}
 			}
 
 			p {
 				font-size: 1.2rem;
+				@include mq(1200px) {
+					font-size: 1.4rem;
+				}
 			}
 		}
 	}
@@ -195,8 +202,10 @@ svg {
 	}
 }
 
-.no-grow {
-	// flex-grow: 0 !important;
+.divider {
+	width: 100%;
+	height: 1px;
+	margin: 1rem 0;
 }
 
 .video-js {
@@ -238,7 +247,9 @@ svg {
 .bg-sixth {
 	@include bg-color($sixth-color);
 }
-
+.bg-seventh {
+	@include bg-color($seventh-color);
+}
 // Text
 .text {
 	width: 100%;
@@ -290,6 +301,7 @@ svg {
 		background-color: $text-color-white;
 		color: $primary-color;
 	}
+
 	
 
 	&--anis {

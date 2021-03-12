@@ -42,8 +42,8 @@
 				<li data-menuanchor="">
 					<a href="#" >Our Animals</a>
 				</li>
-				<li data-menuanchor="">
-					<a href="#" >Ticket prices</a>
+				<li data-menuanchor="prices">
+					<a href="#prices" >Ticket prices</a>
 				</li>
 				<li data-menuanchor="">
 					<a href="#" >Contacts</a>
@@ -78,8 +78,8 @@
 				<li data-menuanchor="">
 					<a href="#" >Our Animals</a>
 				</li>
-				<li data-menuanchor="">
-					<a href="#" >Ticket prices</a>
+				<li data-menuanchor="prices">
+					<a href="#prices" >Ticket prices</a>
 				</li>
 				<li data-menuanchor="">
 					<a href="#" >Contacts</a>
@@ -328,7 +328,57 @@
 		</section>
 		<!-- Plan end -->
 
-		<!-- <section class="section prices bg-sixth img-bot">
+		<!-- Animals start -->
+		<!-- <section class="section animals bg-sixth">
+			<div class="section__layer">
+				<svg class="layer layer-6" width="1920" height="1080" viewBox="0 0 1920 1080" fill="none">
+					<path class="layer-item layer-item-1" d="M1114 1H1814L1234 930H533L1114 1Z" fill="white" fill-opacity="0.1" style="opacity: 1;"></path>
+					<path class="layer-item layer-item-2" d="M1377.93 626H1667L1427.48 1010H1138L1377.93 626Z" fill="white" fill-opacity="0.1" style="opacity: 1;"></path>
+					<path class="layer-item layer-item-3" d="M1713.61 230L1299 899H1424.38L1836 230H1713.61Z" fill="#FFD600" style="opacity: 1;"></path>
+					<path class="layer-item layer-item-4" d="M570.358 581L287 1038H372.69L654 581H570.358Z" fill="#FFD600" style="opacity: 1;"></path>
+					<path class="layer-item layer-item-5" d="M284.688 277L182 442H213.054L315 277H284.688Z" fill="#FFD600" style="opacity: 1;"></path>
+					<path class="layer-item layer-item-6" d="M1662.83 652.669L1664.52 653.726L1553.02 832.859L1551.33 831.802L1662.83 652.669Z" fill="white" style="opacity: 1;"></path>
+					<path class="layer-item layer-item-7" d="M692.826 556.669L694.524 557.726L430.305 982.212L428.607 981.155C531.791 815.383 589.642 722.441 692.826 556.669Z" fill="white" style="opacity: 1;"></path>
+					<path class="layer-item layer-item-8" d="M626.826 322.669L628.524 323.726L517.023 502.859L515.325 501.802L626.826 322.669Z" fill="white" style="opacity: 1;"></path>
+					<path class="layer-item layer-item-9" d="M636.826 322.669L638.524 323.726L527.023 502.859L525.325 501.802L636.826 322.669Z" fill="white" style="opacity: 1;"></path>
+				  </svg>
+			</div>
+			<div class="container">
+				<div class="section__wrapper">
+					<div class="full-width">
+						<div class="swiper-container animals__swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<img src="./images/sections/our-animals/1.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="./images/sections/our-animals/2.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="./images/sections/our-animals/3.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="./images/sections/our-animals/4.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="./images/sections/our-animals/5.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="./images/sections/our-animals/6.jpg" alt="">
+								</div>
+								<div class="swiper-slide">
+									<img src="./images/sections/our-animals/7.jpg" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		Animals end -->
+
+		<!-- Prices start -->
+		<section class="section prices bg-seventh img-bot">
 			<div class="section__layer">
 				<svg class="layer layer-7" width="1920" height="1080" viewBox="0 0 1920 1080" fill="none">
                       <path class="layer-item layer-item-1" d="M1114 1H1814L1234 930H533L1114 1Z" fill="white" fill-opacity="0.1" style="opacity: 1;"></path>
@@ -344,15 +394,16 @@
                     </svg>
 			</div>
 			<div class="container">
-				<div class="section__wrapper jc-end">
+				<div class="section__wrapper">
 					<div class="left left--large relative">
-						<div class="swiper-container">
+						<div class="swiper-container prices__swiper js-slide-left">
 							<div class="swiper-wrapper">
-								<div class="swiper-slide price">
-									<h4>Tickets</h4>
+								<div class="swiper-slide">
+									<div class="price">
+										<h4>Tickets</h4>
 									<ul class="price-list">
 										<li>
-											<span>Children (4 to 7 years old)</span>
+											<span>Children<br>(4 to 7 years old)</span>
 											<strong>$8/pers.</strong>
 										</li>
 										<li>
@@ -369,15 +420,17 @@
 										</li>
 									</ul>
 									<hr class="divider">
-									<div class="price-text">
+									<div class="price__text">
 										<strong>Free for:</strong>
 										<span> Children up to 3 years</span>
 									</div>
-									<a href="#" class="btn btn--white btn--color-white">Buy <span class="lower">a</span> ticket</a>
+									<a href="#" class="btn btn--outline btn--anis"><span>Buy <span class="lower">a</span> ticket</span></a>
+									</div>
 								</div>
 
-								<div class="swiper-slide price hide-mobile">
-									<h4>Excursions</h4>
+								<div class="swiper-slide ">
+									<div class="price">
+										<h4>Excursions</h4>
 									<ul class="price-list">
 										<li>
 											<span>Group (3-7 people)</span>
@@ -393,15 +446,17 @@
 										</li>
 									</ul>
 									<hr class="divider">
-									<div class="price-text">
+									<div class="price__text">
 										<strong>Additionally</strong>
 										<span>Ticket purchase is required</span>
 									</div>
-									<a href="#" class="btn btn--white btn--color-white">Buy <span class="lower">a</span> ticket</a>
+									<a href="#" class="btn btn--outline btn--anis"><span>Buy <span class="lower">a</span> ticket</span></a>
+									</div>
 								</div>
 
-								<div class="swiper-slide price hide-mobile">
-									<h4>Audio Guides</h4>
+								<div class="swiper-slide">
+									<div class="price">
+										<h4>Audio Guides</h4>
 									<ul class="price-list">
 										<li>
 											<span>Adult Program (1h)</span>
@@ -421,14 +476,17 @@
 										</li>
 									</ul>
 									<hr class="divider">
-									<div class="price-text">
+									<div class="price__text">
 										<strong>Free for:</strong>
 										<span> Children up to 3 years</span>
 									</div>
-									<a href="#" class="btn btn--white btn--color-white">Buy <span class="lower">a</span> ticket</a>
+									<a href="#" class="btn btn--outline btn--anis"><span>Buy <span class="lower">a</span> ticket</span></a>
+									</div>
 								</div>
 
 							</div>
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>						  
 						</div>
 					</div>
 
@@ -437,7 +495,9 @@
 					</div>
 				</div>
 			</div>
-		</section> -->
+		</section>
+
+		<!-- Prices end -->
 	</main>
 </body>
 </html>
