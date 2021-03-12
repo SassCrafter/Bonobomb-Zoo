@@ -7,7 +7,7 @@ let timeLine;
 let currentSection;
 
 const fullpageInstance = new fullpage('#fullpage', {
-    anchors: ['home', 'home', 'home', 'about', 'plan-visit', 'prices'],
+    anchors: ['home', 'home', 'home', 'about', 'plan-visit', 'prices', 'contact'],
     menu: '.fullpage-menu',
     recordHistory: false,
     scrollingSpeed: 1000,

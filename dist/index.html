@@ -3,6 +3,15 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+	<!-- Twitter card -->
+	<meta name="twitter:card" content="summary" />
+	<!-- <meta name="twitter:site" content="@flickr" /> -->
+	<meta name="twitter:title" content="Bonobomb Zoo website" />
+	<meta name="twitter:description" content="View the Bonobomb website" />
+	<meta name="twitter:image" content="https://sc-bonobomb.netlify.app/twitter-card.png" />
+
 	<title>Bonobomb</title>
 
 	<!-- Font Awesome -->
@@ -39,14 +48,11 @@
 				<li data-menuanchor="plan-visit">
 					<a href="#plan-visit" >Plan your visit</a>
 				</li>
-				<li data-menuanchor="">
-					<a href="#" >Our Animals</a>
-				</li>
 				<li data-menuanchor="prices">
 					<a href="#prices" >Ticket prices</a>
 				</li>
-				<li data-menuanchor="">
-					<a href="#" >Contacts</a>
+				<li data-menuanchor="contact">
+					<a href="#contact" >Contacts</a>
 				</li>
 			</ul>
 			<div class="cta hide-mobile">
@@ -75,17 +81,19 @@
 				<li data-menuanchor="plan-visit">
 					<a href="#plan-visit" >Plan your visit</a>
 				</li>
-				<li data-menuanchor="">
-					<a href="#" >Our Animals</a>
-				</li>
 				<li data-menuanchor="prices">
 					<a href="#prices" >Ticket prices</a>
 				</li>
-				<li data-menuanchor="">
-					<a href="#" >Contacts</a>
+				<li data-menuanchor="contact">
+					<a href="#contact" >Contacts</a>
 				</li>
 			</ul>
 		</div>
+	</div>
+
+
+	<div class="loader">
+		<div class="lds-hourglass"></div>
 	</div>
 
 
@@ -328,55 +336,6 @@
 		</section>
 		<!-- Plan end -->
 
-		<!-- Animals start -->
-		<!-- <section class="section animals bg-sixth">
-			<div class="section__layer">
-				<svg class="layer layer-6" width="1920" height="1080" viewBox="0 0 1920 1080" fill="none">
-					<path class="layer-item layer-item-1" d="M1114 1H1814L1234 930H533L1114 1Z" fill="white" fill-opacity="0.1" style="opacity: 1;"></path>
-					<path class="layer-item layer-item-2" d="M1377.93 626H1667L1427.48 1010H1138L1377.93 626Z" fill="white" fill-opacity="0.1" style="opacity: 1;"></path>
-					<path class="layer-item layer-item-3" d="M1713.61 230L1299 899H1424.38L1836 230H1713.61Z" fill="#FFD600" style="opacity: 1;"></path>
-					<path class="layer-item layer-item-4" d="M570.358 581L287 1038H372.69L654 581H570.358Z" fill="#FFD600" style="opacity: 1;"></path>
-					<path class="layer-item layer-item-5" d="M284.688 277L182 442H213.054L315 277H284.688Z" fill="#FFD600" style="opacity: 1;"></path>
-					<path class="layer-item layer-item-6" d="M1662.83 652.669L1664.52 653.726L1553.02 832.859L1551.33 831.802L1662.83 652.669Z" fill="white" style="opacity: 1;"></path>
-					<path class="layer-item layer-item-7" d="M692.826 556.669L694.524 557.726L430.305 982.212L428.607 981.155C531.791 815.383 589.642 722.441 692.826 556.669Z" fill="white" style="opacity: 1;"></path>
-					<path class="layer-item layer-item-8" d="M626.826 322.669L628.524 323.726L517.023 502.859L515.325 501.802L626.826 322.669Z" fill="white" style="opacity: 1;"></path>
-					<path class="layer-item layer-item-9" d="M636.826 322.669L638.524 323.726L527.023 502.859L525.325 501.802L636.826 322.669Z" fill="white" style="opacity: 1;"></path>
-				  </svg>
-			</div>
-			<div class="container">
-				<div class="section__wrapper">
-					<div class="full-width">
-						<div class="swiper-container animals__swiper">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide">
-									<img src="./images/sections/our-animals/1.jpg" alt="">
-								</div>
-								<div class="swiper-slide">
-									<img src="./images/sections/our-animals/2.jpg" alt="">
-								</div>
-								<div class="swiper-slide">
-									<img src="./images/sections/our-animals/3.jpg" alt="">
-								</div>
-								<div class="swiper-slide">
-									<img src="./images/sections/our-animals/4.jpg" alt="">
-								</div>
-								<div class="swiper-slide">
-									<img src="./images/sections/our-animals/5.jpg" alt="">
-								</div>
-								<div class="swiper-slide">
-									<img src="./images/sections/our-animals/6.jpg" alt="">
-								</div>
-								<div class="swiper-slide">
-									<img src="./images/sections/our-animals/7.jpg" alt="">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		Animals end -->
-
 		<!-- Prices start -->
 		<section class="section prices bg-seventh img-bot">
 			<div class="section__layer">
@@ -498,6 +457,54 @@
 		</section>
 
 		<!-- Prices end -->
+
+
+		<!-- Contact start -->
+		<section class="section contact bg-eighth">
+			<div class="section__layer">
+				<svg class="layer layer-7" width="1920" height="1080" viewBox="0 0 1920 1080" fill="none">
+                      <path class="layer-item layer-item-1" d="M1114 1H1814L1234 930H533L1114 1Z" fill="white" fill-opacity="0.1" style="opacity: 1;"></path>
+                      <path class="layer-item layer-item-2" d="M270.929 696H560L320.484 1080H31L270.929 696Z" fill="white" fill-opacity="0.1" style="opacity: 1;"></path>
+                      <path class="layer-item layer-item-3" d="M283.358 623L0 1080H85.6902L367 623H283.358Z" fill="#FFD600" style="opacity: 1;"></path>
+                      <path class="layer-item layer-item-4" d="M1183.69 729L1081 894H1112.05L1214 729H1183.69Z" fill="#FFD600" style="opacity: 1;"></path>
+                      <path class="layer-item layer-item-5" d="M1772.61 412L1358 1081H1483.38L1895 412H1772.61Z" fill="#FFD600" style="opacity: 1;"></path>
+                      <path class="layer-item layer-item-6" d="M636.826 654.669L638.524 655.726L374.304 1080.21L372.607 1079.16L636.826 654.669Z" fill="white" style="opacity: 1;"></path>
+                      <path class="layer-item layer-item-7" opacity="1" d="M1413.83 654.669L1415.52 655.726L1151.3 1080.21L1149.61 1079.16L1413.83 654.669Z" fill="white"></path>
+                      <path class="layer-item layer-item-8" opacity="1" d="M1423.83 654.669L1425.52 655.726L1161.3 1080.21L1159.61 1079.16L1423.83 654.669Z" fill="white"></path>
+                      <path class="layer-item layer-item-9" d="M336.826 632.669L338.524 633.726L227.02300000000002 812.859L225.325 811.802C268.869 741.846 293.282 702.625 336.826 632.669Z" fill="white" style="opacity: 1;"></path>
+                      <path class="layer-item layer-item-10" d="M346.826 632.669L348.524 633.726L237.023 812.859L235.325 811.802L346.826 632.669Z" fill="white" style="opacity: 1;"></path>
+                    </svg>
+			</div>
+
+			<div class="container">
+				<div class="section__wrapper jc-end">
+					<div class="left relative js-slide-left">
+						<div class="text">
+							<h2 class="xlarge">Get in Touch</h2>
+						</div>
+						<form class="form" id="get-in-touch">
+							<div class="form__group">
+								<input type="text" name="name" placeholder="Your Name" required>
+							</div>
+							<div class="form__group">
+								<input type="email" name="email" placeholder="Your email" required>
+							</div>
+							<div class="form__group">
+								<input type="text" name="phone" placeholder="Your phone" required>
+							</div>
+							<div class="form__group">
+								<textarea name="message" cols="30" rows="10"></textarea>
+							</div>
+							<button type="submit" class="btn btn--anis"><span>send message</span></button>
+						</form>
+					</div>
+					<div class="right section__image">
+						<img class="js-slide-right" src="./images/sections/dog.png" alt="">
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Contact end -->
 	</main>
 </body>
 </html>
